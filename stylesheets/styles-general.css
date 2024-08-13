@@ -1,0 +1,407 @@
+/* *************************** THIS IS THE START FOR THE GENERAL CSS ************************************* */
+
+body {
+    background-color: #E4E4E4;
+}
+
+.generate-btn {
+    --bs-btn-bg: #434EA0;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-border-color: #434EA0;
+    --bs-btn-hover-bg: #2D2A6D;
+    --bs-btn-hover-border-color: #2D2A6D;
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-active-bg: #2D2A6D;
+    --bs-btn-active-border-color: #2D2A6D;
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+}
+
+/* *************************** THIS IS THE end FOR THE GENERAL CSS ************************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************** THIS IS THE START FOR THE INDEX PAGE ************************************* */
+.menu {
+    display: flex;
+}
+
+.menu-button {
+    border: none;
+    color: #434EA0;
+    padding: 10px 25px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.clicked {
+    border-bottom: 3px solid ##3883FF;
+    background-color: #434EA0;
+    color: #fff;
+}
+
+@keyframes fillup {
+    from {background-position: 0% 100%;}
+    to {background-position: 0% 0%;}
+}
+
+.animate {
+    background-image: linear-gradient(to top, #7E4178, #434EA0);
+    background-size: 100% 200%;
+    animation-name: fillup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /*border-bottom: 5px solid #434EA0;*/
+}
+
+.logout {
+    cursor: pointer;
+    border-radius: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    border: none;
+    color: #434EA0;
+    padding: 20px 25px;
+}
+
+
+/* Initial styling */
+.logout-button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  
+    white-space: nowrap;
+    width: 140px;
+    height: 50px;
+    perspective: 1000px; /* Set perspective for 3D effect */
+}
+
+.logout-button .username,
+.logout-button .hover-text {
+    position: absolute;
+    color: #434EA0;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden; /* Hide the back face during animation */
+    transition: transform 0.3s ease-in-out; /* Transition for flip effect */
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+}
+
+.logout-button .hover-text {
+    transform: rotateY(180deg); /* Initial flipped state */
+}
+
+/* Hover effect */
+.logout-button:hover .username {
+    transform: rotateY(180deg); /* Rotate on hover for flip effect */
+}
+
+.logout-button:hover .hover-text {
+    transform: rotateY(0deg); /* Flip back to original state on hover */
+}
+
+
+.sidebar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    color: white;
+    padding: 20px;
+    z-index: 999;
+}
+
+.sidebar-button, .div-block {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: flex-start;
+    }
+
+    .logout {
+        display: none;
+    }
+
+    .sidebar {
+        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-right: 0;
+    }
+
+    .sidebar.open {
+        right: 0;
+    }
+
+    .menu-button {
+        display: flex;
+        justify-content: start;
+        margin-top: 10px;
+    }
+
+    .div-block {
+        display: block;
+    }
+
+    .sidebar-button {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #000;
+        margin-right: -160px !important;
+    }
+}
+/* *************************** THIS IS THE END FOR THE INDEX PAGE ************************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************** THIS IS THE START FOR THE JOB ORDER PAGE ************************************* */
+@media (max-width: 768px) {
+    #link_back {
+        display: none;
+    }
+}
+/* *************************** THIS IS THE END FOR THE JOB ORDER PAGE ************************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *************************** THIS IS THE START FOR THE CREDIT APPLICATION PAGE ************************************* */
+@media screen and (max-width: 575px) {
+    .date-td {
+        font-size: 14px !important;
+    }
+    .sign-td {
+        margin-top: 70px !important;
+        font-size: 14px !important;
+    }
+
+    .submit-button {
+        position: fixed;
+        bottom: -20px;
+        right: 130px !important;
+        z-index: 999;
+        transition: bottom 0.3s ease-out;
+    }
+
+    #submitForm {
+        height: 50px !important;
+        width: 50px !important;
+        font-size: 15px;
+    }
+
+    .print-button {
+        right: 130px !important;
+        z-index: 999;
+        transition: bottom 0.3s ease-out;
+    }
+
+    #printForm {
+        height: 50px !important;
+        width: 50px !important;
+        font-size: 15px;
+    }
+
+    .img-stapp {
+        height: 50px !important;
+        width: auto !important;
+    }
+}
+
+.submit-button {
+    position: fixed;
+    bottom: -100px;
+    right: 50px;
+    z-index: 999;
+    transition: bottom 0.3s ease-out;
+}
+
+.submit-button.active {
+    bottom: 50px;
+}
+
+.print-button {
+    position: fixed;
+    bottom: -100px;
+    right: 50px;
+    z-index: 999;
+    transition: bottom 0.3s ease-out;
+}
+
+.print-button.active {
+    bottom: 120px;
+}
+/* *************************** THIS IS THE END FOR THE CREDIT APPLICATION PAGE ************************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************* THIS IS THE START FOR THE PRINT MODAL PAGE ************************************************** */
+.title-bar {
+    background-color: #434EA0; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 20px; 
+    text-align: center; 
+    padding: 5px; 
+    margin-top: 20px;
+}
+
+.header-bar {
+    background-color: #434EA0; color: white; width: 100%; margin-top: 15px; margin-bottom: 15px; text-align: center;
+}
+
+.user-table {
+    border: 1px solid lightgray; 
+    border-collapse: collapse; 
+    width: 100%; 
+    table-layout: fixed;
+}
+
+.ml-2 {
+    margin-left: 20px;
+}
+
+.user-table-td {
+    border: 1px solid lightgray; 
+    padding-left: 10px;
+}
+
+.user-table-label {
+    color: gray; 
+    display: flex; 
+    justify-content: start; 
+    text-align: start; 
+    padding: 20px;
+}
+
+.user-table-label-content {
+    width: 100%; 
+    display: flex; 
+    justify-content: start; 
+    text-align: start; 
+    padding: 20px;
+}
+
+.middle-bar {
+    background-color: #434EA0; 
+    color: white; 
+    margin-top: 15px; 
+    margin-bottom: 15px; 
+    width: 100%;
+}
+
+.table-details {
+    border: 1px solid lightgray; 
+    border-collapse: collapse; 
+    width: 100%; 
+    table-layout: fixed; 
+    text-align: center
+}
+
+.table-details-header {
+    border: 1px solid lightgray; 
+    text-align:center; 
+    color: gray; 
+    padding: 10px;
+}
+
+.border-1-lightgray {
+    border: 1px solid lightgray;
+}
+
+.table-details-label {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    text-align: center; 
+    padding: 15px 0;
+    min-height: 15px;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid black; /* Adjust border style as needed */
+    margin-bottom: 5px; /* Optional margin for spacing between line and text */
+}
+/* ************************************* THIS IS THE START FOR THE PRINT MODAL PAGE ************************************************** */
